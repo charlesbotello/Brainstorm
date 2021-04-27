@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB63842626386F88001AD1E6 /* PersonBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63842526386F88001AD1E6 /* PersonBrain.swift */; };
+		CB63842A2638777B001AD1E6 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6384292638777B001AD1E6 /* ShowDetailsViewController.swift */; };
 		CBA7F0D62637748300F09535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA7F0D52637748300F09535 /* AppDelegate.swift */; };
 		CBA7F0D82637748300F09535 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA7F0D72637748300F09535 /* SceneDelegate.swift */; };
 		CBA7F0DA2637748300F09535 /* InitialLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA7F0D92637748300F09535 /* InitialLandingViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB63842526386F88001AD1E6 /* PersonBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonBrain.swift; sourceTree = "<group>"; };
+		CB6384292638777B001AD1E6 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
 		CBA7F0D22637748300F09535 /* Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA7F0D52637748300F09535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA7F0D72637748300F09535 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA7F0D92637748300F09535 /* InitialLandingViewController.swift */,
+				CB6384292638777B001AD1E6 /* ShowDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA7F0F02637A63300F09535 /* Person.swift */,
+				CB63842526386F88001AD1E6 /* PersonBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA7F0DA2637748300F09535 /* InitialLandingViewController.swift in Sources */,
+				CB63842626386F88001AD1E6 /* PersonBrain.swift in Sources */,
 				CBA7F0D62637748300F09535 /* AppDelegate.swift in Sources */,
 				CBA7F0F12637A63300F09535 /* Person.swift in Sources */,
+				CB63842A2638777B001AD1E6 /* ShowDetailsViewController.swift in Sources */,
 				CBA7F0D82637748300F09535 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
