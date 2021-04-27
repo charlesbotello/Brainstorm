@@ -46,6 +46,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hQe-0e-jry"/>
+                    <connections>
+                        <outlet property="personImageView" destination="GBY-aj-c5Z" id="kQB-nQ-4ve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
