@@ -20,11 +20,16 @@ class InitialLandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         personOne.createPerson(name: "John Wick", details: "Part time Husband, Part time assassin with anger issues", imageName: "John-Wick")
-        personOne.loadImage(path: personOne.getImage(), imageView: personOneImageView)
+        
+        personOne.circleImage(imageView: personOneImageView)
+        personOneImageView.image = personOne.getImageUI()
+//        personOne.circleImage(imageView: personTwoImageView)
         
         personTwo.createPerson(name: "Michael Corleone", details: "Misunderstood bussiness man,has an idiot for a brother", imageName: "Michael-Corleone")
-        personTwo.loadImage(path: personTwo.getImage(), imageView: personTwoImageView)
+        personTwo.circleImage(imageView: personTwoImageView)
+        personTwoImageView.image = personTwo.getImageUI()
 
+        
         navigationItem.title = personOne.getName() + " and " + personTwo.getName()
         
         
@@ -35,7 +40,7 @@ class InitialLandingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let showController = segue.destination as? ShowDetailsViewController {
-            showController.personOne = self.currentPerson
+            showController.person = self.currentPerson
         }
 
     }

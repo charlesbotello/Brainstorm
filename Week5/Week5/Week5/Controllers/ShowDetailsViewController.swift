@@ -9,20 +9,22 @@ import UIKit
 
 class ShowDetailsViewController: UIViewController {
 
-    var personOne: PersonBrain?
+    var person: PersonBrain?
     
 //    var personOneImage: String?
 //    var personOneDetails: String?
     
-    @IBOutlet weak var personOneImageView: UIImageView!
+    @IBOutlet weak var personImageView: UIImageView!
     
-    @IBOutlet weak var personOneDetailTextView: UITextView!
+    @IBOutlet weak var personDetailTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        personOne?.loadImage(path: personOne!.getImage(), imageView: personOneImageView)
-        personOneDetailTextView.text = personOne?.getDetails()
+//        personOne?.loadImage(path: personOne!.getImage(), imageView: personOneImageView)
+        personImageView.image = person?.getImageUI()
+        
+        personDetailTextView.text = person?.getDetails()
     }
 
 }
