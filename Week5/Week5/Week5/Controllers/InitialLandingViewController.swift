@@ -7,30 +7,42 @@
 
 import UIKit
 
-protocol DetailViewProtocol {
-    func updateName(name: String)
-}
 
-class InitialLandingViewController: UIViewController {
+
+class InitialLandingViewController: UIViewController, DetailViewProtocol {
+    
+    
+    
     var personOne = PersonBrain()
     var personTwo = PersonBrain()
 
     var currentPerson: PersonBrain?
+//    var delegate: DetailViewProtocol?
     
     @IBOutlet weak var personOneImageView: UIImageView!
     
     @IBOutlet weak var personOneDetailsLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        personOne.createPerson(name: "Michael Corleone", details: "Misunderstood bussiness man,has an idiot for a brother", imageName: "Michael-Corleone")
+        navigationItem.title = personOne.getName()
+        
+        personOne.createPerson(name: "Julius Caesar", details: "Gaius Julius Caesar was a leader of ancient Rome who significantly transformed what became known as the Roman Empire by greatly expanding its geographic reach and establishing its imperial system. ", imageName: "Julius-Caesar")
         
         personOne.circleImage(imageView: personOneImageView)
         personOneImageView.image = personOne.getImageUI()
 
         personOneDetailsLabel.text = personOne.getDetails()
-        navigationItem.title = personOne.getName()
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = personOne.getName()
+      
         
         
     }
@@ -38,8 +50,9 @@ class InitialLandingViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let showController = segue.destination as? ShowDetailsViewController {
-            showController.person = self.currentPerson
+        if let showDetailsVC = segue.destination as? ShowDetailsViewController {
+            showDetailsVC.person = self.currentPerson
+            showDetailsVC.delegate = self
         }
 
     }
@@ -53,6 +66,10 @@ class InitialLandingViewController: UIViewController {
         
     }
     
-
+    func updateName(name: String) {
+        print(personOne.setName(name: name))
+        print(personOne.getName())
+    }
+    
 }
 
