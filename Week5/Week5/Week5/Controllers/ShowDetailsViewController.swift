@@ -17,6 +17,7 @@ class ShowDetailsViewController: UIViewController {
     @IBOutlet weak var personImageView: UIImageView!
     
     @IBOutlet weak var personDetailTextView: UITextView!
+    @IBOutlet weak var personNameTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,11 @@ class ShowDetailsViewController: UIViewController {
 //        personOne?.loadImage(path: personOne!.getImage(), imageView: personOneImageView)
         personImageView.image = person?.getImageUI()
         
+        personNameTextLabel.text = person?.getName()
+        
         personDetailTextView.text = person?.getDetails()
+        
+        
     }
 
 }

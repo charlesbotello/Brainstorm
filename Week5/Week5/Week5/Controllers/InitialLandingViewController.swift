@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DetailViewProtocol {
+    func updateName(name: String)
+}
+
 class InitialLandingViewController: UIViewController {
     var personOne = PersonBrain()
     var personTwo = PersonBrain()
@@ -15,22 +19,17 @@ class InitialLandingViewController: UIViewController {
     
     @IBOutlet weak var personOneImageView: UIImageView!
     
-    @IBOutlet weak var personTwoImageView: UIImageView!
+    @IBOutlet weak var personOneDetailsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personOne.createPerson(name: "John Wick", details: "Part time Husband, Part time assassin with anger issues", imageName: "John-Wick")
+        personOne.createPerson(name: "Michael Corleone", details: "Misunderstood bussiness man,has an idiot for a brother", imageName: "Michael-Corleone")
         
         personOne.circleImage(imageView: personOneImageView)
         personOneImageView.image = personOne.getImageUI()
-//        personOne.circleImage(imageView: personTwoImageView)
-        
-        personTwo.createPerson(name: "Michael Corleone", details: "Misunderstood bussiness man,has an idiot for a brother", imageName: "Michael-Corleone")
-        personTwo.circleImage(imageView: personTwoImageView)
-        personTwoImageView.image = personTwo.getImageUI()
 
-        
-        navigationItem.title = personOne.getName() + " and " + personTwo.getName()
+        personOneDetailsLabel.text = personOne.getDetails()
+        navigationItem.title = personOne.getName()
         
         
         
@@ -45,8 +44,6 @@ class InitialLandingViewController: UIViewController {
 
     }
     
-    
-    
     @IBAction func personOneButtonPressed(_ sender: UIButton) {
 //        let showController = ShowDetailsViewController()
 //        showController.personOneImage = self.personOne.getImage()
@@ -56,12 +53,6 @@ class InitialLandingViewController: UIViewController {
         
     }
     
-    @IBAction func personTwoButtonPressed(_ sender: UIButton) {
-        self.currentPerson = personTwo
-        performSegue(withIdentifier: "PersonToShow", sender: self)
-        
-    }
-    
-    
+
 }
 

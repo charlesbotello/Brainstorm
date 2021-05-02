@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X8D-jC-iJg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="IRs-pE-nP3">
+            <objects>
+                <viewController id="X8D-jC-iJg" customClass="ViewController" customModule="Without_Autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdk-CX-C0b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAY-mu-y71" userLabel="View 1">
+                                <rect key="frame" x="10" y="54" width="394" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8ou-SS-nEb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-iH-M9D" userLabel="View 2">
+                                <rect key="frame" x="10" y="114" width="192" height="678"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVO-7c-INy" userLabel="View 3">
+                                <rect key="frame" x="212" y="114" width="192" height="678"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-kV-JQV" userLabel="View 4">
+                                <rect key="frame" x="10" y="802" width="394" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kAY-mu-y71" firstAttribute="leading" secondItem="i4j-SB-fes" secondAttribute="leading" constant="10" id="7aw-3l-0ZM"/>
+                            <constraint firstItem="kAY-mu-y71" firstAttribute="top" secondItem="i4j-SB-fes" secondAttribute="top" constant="10" id="BaZ-0A-9Ov"/>
+                            <constraint firstItem="sVO-7c-INy" firstAttribute="leading" secondItem="zTn-iH-M9D" secondAttribute="trailing" constant="10" id="EEr-Mu-7V5"/>
+                            <constraint firstItem="i4j-SB-fes" firstAttribute="trailing" secondItem="EJo-kV-JQV" secondAttribute="trailing" constant="10" id="Gbw-3z-13R"/>
+                            <constraint firstItem="EJo-kV-JQV" firstAttribute="leading" secondItem="i4j-SB-fes" secondAttribute="leading" constant="10" id="QOU-iP-nMp"/>
+                            <constraint firstItem="zTn-iH-M9D" firstAttribute="leading" secondItem="i4j-SB-fes" secondAttribute="leading" constant="10" id="Ryx-YS-kEy"/>
+                            <constraint firstItem="i4j-SB-fes" firstAttribute="bottom" secondItem="EJo-kV-JQV" secondAttribute="bottom" constant="10" id="c9R-Hl-Pcz"/>
+                            <constraint firstItem="sVO-7c-INy" firstAttribute="width" secondItem="zTn-iH-M9D" secondAttribute="width" id="gXd-Eg-2WI"/>
+                            <constraint firstItem="zTn-iH-M9D" firstAttribute="top" secondItem="kAY-mu-y71" secondAttribute="bottom" constant="10" id="geZ-w1-QuE"/>
+                            <constraint firstItem="i4j-SB-fes" firstAttribute="bottom" secondItem="zTn-iH-M9D" secondAttribute="bottom" constant="70" id="ib9-xd-eev"/>
+                            <constraint firstItem="i4j-SB-fes" firstAttribute="trailing" secondItem="kAY-mu-y71" secondAttribute="trailing" constant="10" id="r0u-fR-6EV"/>
+                            <constraint firstItem="sVO-7c-INy" firstAttribute="top" secondItem="kAY-mu-y71" secondAttribute="bottom" constant="10" id="s0I-HR-d3h"/>
+                            <constraint firstItem="EJo-kV-JQV" firstAttribute="top" secondItem="sVO-7c-INy" secondAttribute="bottom" constant="10" id="ufj-8g-LOf"/>
+                            <constraint firstItem="i4j-SB-fes" firstAttribute="trailing" secondItem="sVO-7c-INy" secondAttribute="trailing" constant="10" id="y7V-NP-YXm"/>
+                            <constraint firstItem="EJo-kV-JQV" firstAttribute="height" secondItem="kAY-mu-y71" secondAttribute="height" id="zU8-tK-9g0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i4j-SB-fes"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGC-wK-9VW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>

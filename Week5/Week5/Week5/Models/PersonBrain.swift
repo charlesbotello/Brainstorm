@@ -34,7 +34,7 @@ class PersonBrain {
     
     func getDetails() -> String {
         guard let details = person?.details else { return "details not found" }
-        return "Details About You \n\(details)"
+        return "\(details)"
     }
     
     func circleImage(imageView: UIImageView) {
