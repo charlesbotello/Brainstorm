@@ -80,7 +80,7 @@
                                     <constraint firstAttribute="width" constant="350" id="Moq-4v-62W"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-hQ-etA">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-hQ-etA" userLabel="user name Text Field">
                                 <rect key="frame" x="107" y="298" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ddb-JJ-5aK"/>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-s7-LRs">
-                                <rect key="frame" x="57" y="383" width="300" height="250"/>
+                                <rect key="frame" x="57" y="468" width="300" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="N9e-Oq-EPy"/>
@@ -101,15 +101,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz2-16-8BX" userLabel="User details Text Field">
+                                <rect key="frame" x="107" y="383" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="glN-ah-V7q"/>
+                                    <constraint firstAttribute="height" constant="35" id="rRz-VM-PLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="enL-xM-fOM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cz2-16-8BX" firstAttribute="top" secondItem="gx2-hQ-etA" secondAttribute="bottom" constant="50" id="Jeo-fR-mLn"/>
+                            <constraint firstItem="cz2-16-8BX" firstAttribute="centerX" secondItem="3C6-Pw-vdj" secondAttribute="centerX" id="NnC-pq-kzQ"/>
+                            <constraint firstItem="a8g-s7-LRs" firstAttribute="top" secondItem="cz2-16-8BX" secondAttribute="bottom" constant="50" id="OOf-jM-LC1"/>
                             <constraint firstItem="BM4-vT-fvD" firstAttribute="centerX" secondItem="3C6-Pw-vdj" secondAttribute="centerX" id="VYb-Di-bfO"/>
                             <constraint firstItem="gx2-hQ-etA" firstAttribute="centerX" secondItem="3C6-Pw-vdj" secondAttribute="centerX" id="Zwr-lu-eZM"/>
                             <constraint firstItem="BM4-vT-fvD" firstAttribute="top" secondItem="enL-xM-fOM" secondAttribute="top" constant="10" id="atf-7e-tMa"/>
                             <constraint firstItem="a8g-s7-LRs" firstAttribute="centerX" secondItem="3C6-Pw-vdj" secondAttribute="centerX" id="ol1-uM-dNL"/>
-                            <constraint firstItem="a8g-s7-LRs" firstAttribute="top" secondItem="gx2-hQ-etA" secondAttribute="bottom" constant="50" id="sIf-Bx-pGB"/>
                             <constraint firstItem="gx2-hQ-etA" firstAttribute="top" secondItem="BM4-vT-fvD" secondAttribute="bottom" constant="50" id="u35-31-zvN"/>
                         </constraints>
                     </view>
