@@ -37,6 +37,15 @@ class PersonBrain {
         }
     }
     
+    func setName(name: String) {
+        person?.name = name
+    }
+    
+    func setDetails(details: String) {
+        person?.details = details
+    }
+    
+    
     func circleImage(imageView: UIImageView) {
         let radius = imageView.frame.width / 2
         imageView.layer.cornerRadius = radius

@@ -7,7 +7,9 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class LandingViewController: UIViewController, DetailViewProtocol {
+    
+    
     var person = PersonBrain()
     @IBOutlet weak var personImageView: UIImageView!
     
@@ -22,11 +24,26 @@ class LandingViewController: UIViewController {
         self.title = person.getName()
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+        print(person.getName())
+        navigationItem.title = person.getName()
+        personDetailsLabel.text = person.getDetails()
+    }
+    
+    func updateName(name: String) {
+        person.setName(name: name)
+    }
+    
+    func updateDetails(details: String) {
+        person.setDetails(details: details)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailVC = segue.destination as? DetailViewController {
             detailVC.person = self.person
+            detailVC.delegate = self 
         }
     }
     
