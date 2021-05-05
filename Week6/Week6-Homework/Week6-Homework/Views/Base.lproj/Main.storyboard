@@ -44,7 +44,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JIb-u3-J7M" kind="show" id="XB0-dT-sGu"/>
+                                    <action selector="learnMoreButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qae-ZG-7N0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,6 +60,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="agX-sY-hZw"/>
+                    <connections>
+                        <outlet property="personDetailsLabel" destination="e6f-uK-p37" id="FJF-Qr-C0d"/>
+                        <outlet property="personImageView" destination="Fdr-r4-9Hc" id="j3V-yP-C6V"/>
+                        <segue destination="JIb-u3-J7M" kind="show" identifier="LandingToDetails" id="bqG-8P-Fsg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +85,7 @@
                                     <constraint firstAttribute="width" constant="350" id="Moq-4v-62W"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-hQ-etA" userLabel="user name Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-hQ-etA" userLabel="user name Text Field">
                                 <rect key="frame" x="107" y="298" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ddb-JJ-5aK"/>
@@ -101,7 +106,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz2-16-8BX" userLabel="User details Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details about you...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz2-16-8BX" userLabel="User details Text Field">
                                 <rect key="frame" x="107" y="383" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="glN-ah-V7q"/>
@@ -125,6 +130,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tj0-Oq-gw3"/>
+                    <connections>
+                        <outlet property="personDetailTextField" destination="cz2-16-8BX" id="EYc-qy-bUb"/>
+                        <outlet property="personDetailTextView" destination="a8g-s7-LRs" id="HBo-fo-MdY"/>
+                        <outlet property="personNameTextField" destination="gx2-hQ-etA" id="MaC-ey-rtI"/>
+                        <outlet property="userImageView" destination="BM4-vT-fvD" id="je6-V9-CAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuH-dH-zfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

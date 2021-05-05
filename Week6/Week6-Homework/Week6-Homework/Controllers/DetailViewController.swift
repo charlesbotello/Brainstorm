@@ -8,10 +8,22 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var person: PersonBrain?
 
+    @IBOutlet weak var userImageView: UIImageView!
+    
+    @IBOutlet weak var personNameTextField: UITextField!
+    
+    @IBOutlet weak var personDetailTextField: UITextField!
+    
+    
+    @IBOutlet weak var personDetailTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userImageView.image = person?.getImage()
+        personDetailTextView.text = person?.getDetails()
         // Do any additional setup after loading the view.
     }
     
